@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: management-frontend-service
+  namespace: app
+
+spec:
+  selector:
+    app: management-frontend
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 80
+  type: ClusterIP
